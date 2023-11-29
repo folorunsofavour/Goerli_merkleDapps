@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, 
+ html{
+min-height:100%; 
+} 
+
+
+body {
+  font-family: "Gotham";
+  background-color: #3987b8;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-position: bottom;
+}
+
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/GothamRounded-Bold.otf") format("opentype");
+}
+
+/* .bg-back {
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+} */
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  body{
+    background-image: url("/images/desktop.png");
+  }
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  body{
+    background-image: url("/images/1250.png");
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  body{
+    background-image: url("/images/mobileImg.png");
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  body{
+    background-image: url("/images/1920x1080.png");
+  }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  body{
+    background-image: url("/images/1920x1080.png");
+  }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  body{
+    background-image: url("/images/mobileImg.png");
+  }
+  
+}
+
+.bg-pattern {
+  /* background-color: #7d08ff; */
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #f4f4f4;
+  background: #95c4d0;
+}
+
+::selection {
+  color: #f4f4f4;
+  background: #95c4d0;
+}
+
+.gradient-background {
+  background: linear-gradient(213deg, #b312dd, #ff4e58, #9222d4, #33c2d0);
+  background-size: 240% 240%;
+  animation: gradient-animation 12s ease infinite;
+}
+
+.underlined {
+  position: relative;
+}
+
+.underlined::after {
+  content: "";
+  position: absolute;
+  bottom: -1.525rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  height: 40px;
+  z-index: 0;
+  background-repeat: no-repeat;
+}
